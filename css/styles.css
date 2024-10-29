@@ -1,0 +1,181 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2b3e50;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 12px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+    background-color: #405a76;
+}
+
+.sidebar-item.active {
+    background-color: #405a76;
+}
+
+.sidebar-item.completed::after {
+    content: "✓";
+    color: #4CAF50;
+    font-weight: bold;
+    float: right;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #405a76;
+    box-shadow: 0 0 5px rgba(64, 90, 118, 0.3);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+/* Button Styling */
+.submit-btn {
+    width: fit-content;
+    background-color: #2b3e50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: #405a76;
+}
+
+/* Hidden Class for Toggling */
+.hidden {
+    display: none;
+}
+
+/* Role-Based Questions Styling */
+.role-questions {
+    margin-top: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}

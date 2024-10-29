@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-hub Application Forms</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" id="sidebar-personal-details" class="sidebar-item">Personal Details</a>
+            <a href="#" id="sidebar-education" class="sidebar-item">Education</a>
+            <a href="#" id="sidebar-position-info" class="sidebar-item">Position Information</a>
+            <a href="#" id="sidebar-document-upload" class="sidebar-item">Document Upload</a>
+            <a href="#" id="sidebar-role-based" class="sidebar-item">Role Based Questions</a>
+            <a href="#" id="sidebar-declaration" class="sidebar-item">Declaration</a>
+        </div>
+                    <!-- Personal Details Section -->
+
+        <div class="main-content">
+            <section id="personal-details" class="form-section">
+                <h1>Personal Details</h1>
+                <form>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required><br>
+    
+                    <label for="Profile image">Profile Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" required><br>
+    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required> <br>
+    
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
+    
+                    <label for="location">Location (City, State)</label>
+                    <input type="text" id="location" name="location" placeholder="City, State" required><br>
+    
+                    <label for="linkedin">LinkedIn Profile</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn Profile URL" required><br>
+    
+                    <label for="github">GitHub Profile</label>
+                    <input type="url" id="github" name="github" placeholder="GitHub Profile URL" required><br>
+    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="form-section hidden">
+                <h1>Education</h1>
+                <form>
+                    <label for="field-of-study">Field of Study:</label>
+                    <input type="text" id="field-of-study" name="field-of-study" placeholder="Enter Your field of study" required><br>
+    
+                    <label for="cgpa">CGPA (%):</label>
+                    <input type="number" id="cgpa" name="cgpa" placeholder="Enter CGPA" max="100" required><br>
+    
+                    <label for="graduation-year">Year of Graduation:</label>
+                    <input type="date" id="graduation-year" name="graduation-year" required><br>
+    
+                    <label for="open-ended">Educational Gap (Fill if it is any):</label>
+                    <textarea id="open-ended" name="open-ended" rows="4" placeholder="Your answer"></textarea><br>
+    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+
+            <!-- Position Information Section -->
+            <section id="position-info" class="form-section hidden">
+                <h1>Position Information</h1>
+            <p class="subtitle">Details about the position you're applying for</p>
+            <form >
+                <label for="position">Job Position Applying For</label>
+                <select id="source" name="source" required>
+                    <option value="">Select Source</option>
+                    <option value="SALES Executive">SALES EXECUTIVE</option>
+                    <option value="SOFTWARE ENGINEER">SOFTWARE ENGINEER</option>
+                    <option value="HR TEAM">HR TEAM</option>
+                    <option value="Digital Marketing">DIGITAL MARKETING </option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <label for="job-id">Job ID (Optional)</label>
+                <input type="text" id="job-id" name="job-id" placeholder="Enter Job ID"><br>
+
+                <label for="source">Source of Application</label>
+                <select id="source" name="source" required>
+                    <option value="">Select Source</option>
+                    <option value="Referral">Referral</option>
+                    <option value="LinkedIn">Job Board</option>
+                    <option value="Company's website">Company Website</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="Naukri">Naukri</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+
+            <!-- Document Upload Section -->
+            <section id="document-upload" class="form-section hidden">
+                <h1>Document Upload</h1>
+                <form>
+            <p class="subtitle">Upload relevant documents for your application</p>
+            <form>
+                <label for="resume">Resume/CV  </label>
+                <input type="file" id="resume" name="resume" accept=".pdf, .docx" required><br>
+
+                <label for="portfolio">Portfolio or Work Samples </label>
+                <input type="file" id="portfolio" name="portfolio" required ><br>
+
+                <label for="certifications">Course completion certifications(Upload even if it's temporary certificate)</label>
+                <input type="file" id="certifications" name="certifications" accept=".pdf, .jpeg, .jpg, .png" required><br>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </section>
+
+            <!-- Role Based Questions Section -->
+            <section id="role-based" class="form-section hidden">
+                <h1>Role Based Questions</h1>
+                <form>
+                    <label for="role-select">Select Your Role:</label>
+                <select id="role-select" name="role-select" required>
+                    <option value="">Select a role</option>
+                    <option value="software-developer">Software Developer</option>
+                    <option value="digital-marketing">Digital-marketing</option>
+                    <option value="sales-executive">Sales Executive</option>
+                    <option value="hr-specialist">HR Specialist</option>
+                </select>
+
+                <div id="role-questions" class="hidden">
+                    <h2>Role-Specific Questions</h2>
+                    <div id="software-developer" class="role-questions hidden">
+                        <label for="programming-experience">Describe your experience with programming languages like Java, Python, or JavaScript:</label><br>
+                        <textarea id="programming-experience" name="programming-experience" rows="4" placeholder="Your answer"></textarea><br>
+
+                        <label for="coding-project">Provide details of a challenging coding project you worked on:</label><br>
+                        <textarea id="coding-project" name="coding-project" rows="4" placeholder="Your answer"></textarea><br>
+                    </div>
+
+                    <div id="digital-marketing" class="role-questions hidden">
+                        <label for="digital-marketing">Explain your experience in managing digital marketing campaigns:</label><br>
+                        <textarea id="digital-marketing" name="digital-marketing" rows="4" placeholder="Your answer"></textarea><br>
+
+                        <label for="marketing-strategy">Describe a successful marketing strategy you developed and implemented:</label><br>
+                        <textarea id="marketing-strategy" name="marketing-strategy" rows="4" placeholder="Your answer"></textarea><br>
+                    </div>
+
+                    <div id="experience-section" style="display: none;">
+                        <label for="experience-years">How many years of relevant experience do you have?</label>
+                        <input type="number" id="experience-years" name="experience-years" min="0" placeholder="Enter number of years">
+    
+                        <label for="skills">Please list your key skills and past job roles</label>
+                        <textarea id="skills" name="skills" rows="4" placeholder="List your skills and past roles"></textarea>
+                    </div>
+
+                    <div id="sales-executive" class="role-questions hidden">
+                        <label for="handle-objections">How do you handle objections during a sales pitch?</label>
+                        <textarea id="handle-objections" name="handle-objections" rows="4" placeholder="Your answer"></textarea>
+
+                        <label for="exceed-targets">Describe a time when you exceeded your sales targets:</label>
+                        <textarea id="exceed-targets" name="exceed-targets" rows="4" placeholder="Your answer"></textarea>
+                    </div>
+
+                    <div id="hr-specialist" class="role-questions hidden">
+                        <label for="recruitment-onboarding">Explain your experience with employee recruitment and onboarding:</label>
+                        <textarea id="recruitment-onboarding" name="recruitment-onboarding" rows="4" placeholder="Your answer"></textarea>
+
+                        <label for="handle-conflicts">How do you handle conflicts within a team?</label>
+                        <textarea id="handle-conflicts" name="handle-conflicts" rows="4" placeholder="Your answer"></textarea>
+                    </div>
+                </div>
+
+                <label for="open-ended">Any additional information (Optional):</label>
+                <textarea id="open-ended" name="open-ended" rows="4" placeholder="Your answer"></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+<!--script for role based questions-->
+            <script>
+                const customQuestionsForm = document.getElementById('custom-questions-form');
+                const roleSelect = document.getElementById('role-select');
+                const roleQuestions = document.getElementById('role-questions');
+                const roleSpecificDivs = document.querySelectorAll('.role-questions');
+        
+                roleSelect.addEventListener('change', function() {
+                
+                    roleSpecificDivs.forEach(div => div.classList.add('hidden'));
+                    // Show the selected role-specific questions
+                    const selectedRole = roleSelect.value;
+                    if (selectedRole) {
+                        roleQuestions.classList.remove('hidden');
+                        document.getElementById(selectedRole).classList.remove('hidden');
+                    } else {
+                        roleQuestions.classList.add('hidden');
+                    }
+                });
+        
+            
+            </script>
+
+            <!-- Declaration Section -->
+            <section id="declaration" class="form-section hidden">
+                <h1>Declaration</h1>
+                <form>
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to the privacy policy.
+                    </label>
+    
+                    <label>
+                        <input type="checkbox" required>
+                        I confirm that I am legally eligible to work.
+                    </label>
+    
+                    <h2>Demographic Information (Optional)</h2>
+                    <label for="demographic-info">Please provide any demographic information you wish to share:</label>
+                    <textarea id="demographic-info" name="demographic-info" rows="4" placeholder="Your answer (optional)"></textarea>
+    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+   
+</body>
+</html>
